@@ -1,16 +1,23 @@
 function SingleProject(props) {
+	const tech = props.tech.split(", ");
+	const image = props.image;
 	return (
-		<div className="main__content__projects__project">
-			<div className="main__content__projects__project__image">
-				<img src={props.image} alt={props.title} />
+		<div className="main__content__projects__projectsList__project">
+			<h3>{props.title}</h3>
+			<p>{props.description}</p>
+			<div className="main__content__projects__projectsList__project__description__tech">
+				{tech.map((item, index) => (
+					<box-icon
+						type="logo"
+						name={item}
+						color="white"
+						size="md"
+						key={index}></box-icon>
+				))}
 			</div>
-			<div className="main__content__projects__project__description">
-				<h3>{props.title}</h3>
-				<p>{props.description}</p>
-				<a href={props.link} target="_blank" rel="noopener noreferrer">
-					View Project
-				</a>
-			</div>
+			<a href={props.link} target="_blank" rel="noopener noreferrer">
+				View Project
+			</a>
 		</div>
 	);
 }
