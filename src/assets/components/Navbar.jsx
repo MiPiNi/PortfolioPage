@@ -1,37 +1,43 @@
+import ReactCountryFlag from "react-country-flag";
+
 function Navbar(props) {
 	return (
 		<nav className="main__navbar">
-			<ul className="main__navbar__list">
-				<a className="main__navbar__list__item" href="#about">
+			<ul className="navbar__list">
+				<a className="navbar__item" href="#about">
 					<li>O mnie</li>
 				</a>
-				<a className="main__navbar__list__item" href="#projects">
+				<a className="navbar__item" href="#projects">
 					<li>Projekty</li>
 				</a>
-				<a className="main__navbar__list__item" href="#contact">
+				<a className="navbar__item" href="#contact">
 					<li>Kontakt</li>
 				</a>
 			</ul>
-			<div className="main__navbar__languages">
+			<div className="navbar__languages">
 				<button
-					className="main__navbar__languages__language"
-					style={{
-						backgroundImage: "url(/src/assets/imgs/en-US.png)",
-						backgroundSize: "100% auto",
-						backgroundRepeat: "no-repeat",
-						backgroundPosition: "center",
-					}}
-					onClick={() => props.langHandler("en")}></button>
+					className="navbar__language"
+					onClick={() => props.langHandler("en")}>
+					{
+						<ReactCountryFlag
+							countryCode="US"
+							svg
+							style={{ fontSize: "4vh" }}
+						/>
+					}
+				</button>
 
 				<button
-					className="main__navbar__languages__language"
-					style={{
-						backgroundImage: "url(/src/assets/imgs/pl-PL.png)",
-						backgroundSize: "100% auto",
-						backgroundRepeat: "no-repeat",
-						backgroundPosition: "center",
-					}}
-					onClick={() => props.langHandler("pl")}></button>
+					className="navbar__language"
+					onClick={() => props.langHandler("pl")}>
+					{
+						<ReactCountryFlag
+							countryCode="PL"
+							svg
+							style={{ fontSize: "4vh" }}
+						/>
+					}
+				</button>
 			</div>
 		</nav>
 	);

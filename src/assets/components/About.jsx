@@ -1,73 +1,78 @@
 function About() {
 	return (
 		<section className="main__content__about fullPage" id="about">
-			<h3 className="main__content__about__title">Kim jestem?</h3>
-			<p className="main__content__about__text">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Quisquam voluptates, quod, quia, voluptatibus quae voluptatem
-				quibusdam voluptatum quos quidem natus quas. Quisquam, quae.
-				Quisquam, quae. Quisquam, quae. Quisquam, quae.
-			</p>
-			<h3 className="main__content__about__title">Co umiem?</h3>
-			<ul className="main__content__about__list">
-				<li className="main__content__about__list__item">
-					Python <span>🔹🔹🔹🔹◼️</span>
-				</li>
-				<li className="main__content__about__list__item">
-					HTML
-					<span className="main__content__about__list__item__progress">
-						🔹🔹🔹🔹◼️
-					</span>
-				</li>
-				<li className="main__content__about__list__item">
-					CSS
-					<span className="main__content__about__list__item__progress">
-						🔹🔹🔹🔹◼️
-					</span>
-				</li>
-				<li className="main__content__about__list__item">
-					SASS
-					<span className="main__content__about__list__item__progress">
-						🔹🔹🔹🔹◼️
-					</span>
-				</li>
-				<li className="main__content__about__list__item">
-					JavaScript
-					<span className="main__content__about__list__item__progress">
-						🔹🔹🔹◼️◼️
-					</span>
-				</li>
-				<li className="main__content__about__list__item">
-					Unity
-					<span className="main__content__about__list__item__progress">
-						🔹🔹🔹◼️◼️
-					</span>
-				</li>
-				<li className="main__content__about__list__item">
-					Git
-					<span className="main__content__about__list__item__progress">
-						🔹🔹🔹◼️◼️
-					</span>
-				</li>
-				<li className="main__content__about__list__item">
-					SQL
-					<span className="main__content__about__list__item__progress">
-						🔹🔹🔹◼️◼️
-					</span>
-				</li>
-				<li className="main__content__about__list__item">
-					React.js
-					<span className="main__content__about__list__item__progress">
-						🔹◼️◼️◼️◼️
-					</span>
-				</li>
-				<li className="main__content__about__list__item">
-					PHP
-					<span className="main__content__about__list__item__progress">
-						🔹◼️◼️◼️◼️
-					</span>
-				</li>
-			</ul>
+			<div className="about__left">
+				<h3 className="about__title">Kim jestem?</h3>
+				<p className="about__text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Quisquam voluptates, quod, quia, voluptatibus quae
+					voluptatem quibusdam voluptatum quos quidem natus quas.
+					Quisquam, quae. Quisquam, quae. Quisquam, quae. Quisquam,
+					quae.
+				</p>
+			</div>
+			<div className="about__right">
+				<h3 className="about__title">Co umiem?</h3>
+				<ul className="about__list">
+					<li className="about__item">
+						Python <span>🔹🔹🔹🔹◼️</span>
+					</li>
+					<li className="about__item">
+						HTML
+						<span className="about__item__progress">
+							🔹🔹🔹🔹◼️
+						</span>
+					</li>
+					<li className="about__item">
+						CSS
+						<span className="about__item__progress">
+							🔹🔹🔹🔹◼️
+						</span>
+					</li>
+					<li className="about__item">
+						SASS
+						<span className="about__item__progress">
+							🔹🔹🔹🔹◼️
+						</span>
+					</li>
+					<li className="about__item">
+						JavaScript
+						<span className="about__item__progress">
+							🔹🔹🔹◼️◼️
+						</span>
+					</li>
+					<li className="about__item">
+						Unity
+						<span className="about__item__progress">
+							🔹🔹🔹◼️◼️
+						</span>
+					</li>
+					<li className="about__item">
+						Git
+						<span className="about__item__progress">
+							🔹🔹🔹◼️◼️
+						</span>
+					</li>
+					<li className="about__item">
+						SQL
+						<span className="about__item__progress">
+							🔹🔹🔹◼️◼️
+						</span>
+					</li>
+					<li className="about__item">
+						React.js
+						<span className="about__item__progress">
+							🔹◼️◼️◼️◼️
+						</span>
+					</li>
+					<li className="about__item">
+						PHP
+						<span className="about__item__progress">
+							🔹◼️◼️◼️◼️
+						</span>
+					</li>
+				</ul>
+			</div>
 		</section>
 	);
 }

@@ -1,5 +1,8 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useState, useEffect } from "react";
 import "./App.scss";
+
 import Navbar from "./assets/components/Navbar";
 import Header from "./assets/components/Header";
 import About from "./assets/components/About";
@@ -11,6 +14,7 @@ function App() {
 
 	useEffect(() => {
 		console.log("language changed to", language);
+		AOS.init();
 	}, [language]);
 
 	const langHandler = (e) => {

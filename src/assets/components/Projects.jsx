@@ -3,8 +3,8 @@ import SingleProject from "./SingleProject";
 function Projects() {
 	return (
 		<section className="main__content__projects fullPage" id="projects">
-			<h2 className="main__content__projects__title">Moje Projekty</h2>
-			<div className="main__content__projects__projectsList">
+			<h2 className="projects__title">Moje Projekty</h2>
+			<div className="projects__projectsList">
 				<SingleProject
 					title={"Strona Portfolio"}
 					description={"Strona zawierająca moje portfolio"}
