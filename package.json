@@ -13,7 +13,8 @@
     "boxicons": "^2.1.4",
     "react": "^18.2.0",
     "react-country-flag": "^3.0.2",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sal.js": "^0.8.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.22",

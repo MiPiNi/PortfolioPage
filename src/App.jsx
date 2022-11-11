@@ -1,6 +1,4 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.scss";
 
 import Navbar from "./assets/components/Navbar";
@@ -10,23 +8,19 @@ import Projects from "./assets/components/Projects";
 import Contact from "./assets/components/Contact";
 
 function App() {
-	const [language, setlanguage] = useState("en");
-
-	useEffect(() => {
-		console.log("language changed to", language);
-		AOS.init();
-	}, [language]);
+	const [language, setlanguage] = useState("pl");
 
 	const langHandler = (e) => {
 		setlanguage(e);
 	};
 	return (
 		<div className="main">
-			<Navbar langHandler={langHandler} />
-			<Header />
+			<Navbar langHandler={langHandler} language={language} />
+
 			<main className="main__content">
-				<About />
-				<Projects />
+				<Header />
+				<About language={language} />
+				<Projects language={language} />
 				<Contact />
 			</main>
 		</div>

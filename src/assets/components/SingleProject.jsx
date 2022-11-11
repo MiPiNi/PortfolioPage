@@ -2,7 +2,10 @@ function SingleProject(props) {
 	const tech = props.tech.split(", ");
 	const image = props.image;
 	return (
-		<div className="projects__projectsList__project">
+		<div
+			className="projects__projectsList__project "
+			data-sal="slide-right"
+			data-sal-duration="1000">
 			<h3 className="project__title">{props.title}</h3>
 			<p className="project__description">{props.description}</p>
 			<div className="project__tech">
@@ -20,7 +23,7 @@ function SingleProject(props) {
 				href={props.link}
 				target="_blank"
 				rel="noopener noreferrer">
-				View Project
+				{props.linkText}
 			</a>
 		</div>
 	);

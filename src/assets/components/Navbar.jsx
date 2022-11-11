@@ -1,17 +1,20 @@
 import ReactCountryFlag from "react-country-flag";
 
 function Navbar(props) {
+	let language = props.language;
 	return (
 		<nav className="main__navbar">
 			<ul className="navbar__list">
 				<a className="navbar__item" href="#about">
-					<li>O mnie</li>
+					<li>{language == "pl" ? "O mnie" : "About me"}</li>
 				</a>
 				<a className="navbar__item" href="#projects">
-					<li>Projekty</li>
+					<li>
+						{language == "pl" ? "Moje projekty" : "My projects"}
+					</li>
 				</a>
 				<a className="navbar__item" href="#contact">
-					<li>Kontakt</li>
+					<li>{language == "pl" ? "Kontakt" : "Contact me"}</li>
 				</a>
 			</ul>
 			<div className="navbar__languages">

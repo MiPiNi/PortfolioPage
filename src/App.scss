@@ -15,14 +15,14 @@ body {
 	scroll-snap-align: start;
 }
 .main {
-	overflow-y: scroll;
-	scroll-behavior: smooth;
-	scroll-snap-type: y mandatory;
 	color: var(--text-color);
 	height: 100vh;
 	pointer-events: auto !important;
 	background: var(--main-color);
 	pointer-events: none;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
 	&__navbar {
 		position: fixed;
 		width: 100%;
