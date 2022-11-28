@@ -1,6 +1,5 @@
 function SingleProject(props) {
 	const tech = props.tech.split(", ");
-	const image = props.image;
 	return (
 		<div
 			className="projects__projectsList__project "
@@ -11,10 +10,12 @@ function SingleProject(props) {
 			<div className="project__tech">
 				{tech.map((item, index) => (
 					<box-icon
+						class="tech__icon"
 						type="logo"
 						name={item}
 						color="white"
 						size="md"
+						title={item}
 						key={index}></box-icon>
 				))}
 			</div>

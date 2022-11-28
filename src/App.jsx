@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import sal from "sal.js";
+import "sal.js/dist/sal.css";
 import "./App.scss";
 
 import Navbar from "./assets/components/Navbar";
@@ -13,6 +15,9 @@ function App() {
 	const langHandler = (e) => {
 		setlanguage(e);
 	};
+	useEffect(() => {
+		sal({ once: false });
+	}, []);
 	return (
 		<div className="main">
 			<Navbar langHandler={langHandler} language={language} />
@@ -21,7 +26,7 @@ function App() {
 				<Header />
 				<About language={language} />
 				<Projects language={language} />
-				<Contact />
+				<Contact language={language} />
 			</main>
 		</div>
 	);

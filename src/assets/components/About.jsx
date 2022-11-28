@@ -1,80 +1,42 @@
+import { useEffect, useState } from "react";
+import Skill from "./Skill";
+
 function About(props) {
 	let language = props.language;
+	const [age, setAge] = useState(0);
+	useEffect(() => {
+		setAge(new Date().getFullYear() - 2002);
+	}, []);
 	return (
 		<section className="main__content__about fullPage" id="about">
-			<div className="about__left">
+			<div className="about__top">
 				<h3 className="about__title">
 					{language === "pl" ? "Kim jestem?" : "Who am I?"}
 				</h3>
-				<p className="about__text">
-					{language == "pl"
-						? "Polski tekst o mnie"
-						: "English text about me"}
-				</p>
-			</div>
-			<div className="about__right">
 				<h3 className="about__title">
 					{language === "pl" ? "Co umiem?" : "What can I do?"}
 				</h3>
-				<ul className="about__list">
-					<li className="about__item">
-						Python <span>🔹🔹🔹🔹◼️</span>
-					</li>
-					<li className="about__item">
-						HTML
-						<span className="about__item__progress">
-							🔹🔹🔹🔹◼️
-						</span>
-					</li>
-					<li className="about__item">
-						CSS
-						<span className="about__item__progress">
-							🔹🔹🔹🔹◼️
-						</span>
-					</li>
-					<li className="about__item">
-						SASS
-						<span className="about__item__progress">
-							🔹🔹🔹🔹◼️
-						</span>
-					</li>
-					<li className="about__item">
-						JavaScript
-						<span className="about__item__progress">
-							🔹🔹🔹◼️◼️
-						</span>
-					</li>
-					<li className="about__item">
-						Unity
-						<span className="about__item__progress">
-							🔹🔹🔹◼️◼️
-						</span>
-					</li>
-					<li className="about__item">
-						Git
-						<span className="about__item__progress">
-							🔹🔹🔹◼️◼️
-						</span>
-					</li>
-					<li className="about__item">
-						SQL
-						<span className="about__item__progress">
-							🔹🔹🔹◼️◼️
-						</span>
-					</li>
-					<li className="about__item">
-						React.js
-						<span className="about__item__progress">
-							🔹◼️◼️◼️◼️
-						</span>
-					</li>
-					<li className="about__item">
-						PHP
-						<span className="about__item__progress">
-							🔹◼️◼️◼️◼️
-						</span>
-					</li>
-				</ul>
+			</div>
+			<div className="about__main">
+				<div className="about__text">
+					<p className="about__text">
+						{language == "pl"
+							? `Polski tekst o mnie`
+							: `English text about me`}
+					</p>
+				</div>
+				<div className="about__skills">
+					<Skill name="Python" level="4" />
+					<Skill name="HTML" level="4" />
+					<Skill name="CSS" level="4" />
+					<Skill name="SASS" level="4" />
+					<Skill name="JavaScript" level="3" />
+					<Skill name="Unity" level="3" />
+					<Skill name="Git" level="3" />
+					<Skill name="SQL" level="3" />
+					<Skill name="React.js" level="1" />
+					<Skill name="PHP" level="1" />
+				</div>
 			</div>
 		</section>
 	);
