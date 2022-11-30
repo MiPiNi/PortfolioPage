@@ -2,7 +2,11 @@ function Contact(props) {
 	let language = props.language;
 	const handleClick = () => {
 		navigator.clipboard.writeText("d4niel.grala@gmail.com");
-		alert("Email copied to clipboard!");
+		props.alertHandler(
+			language == "pl"
+				? "E-mail skopiowany do schowka"
+				: "E-mail copied to clipboard"
+		);
 	};
 	return (
 		<section className="main__content__contact fullPage" id="contact">
@@ -16,36 +20,48 @@ function Contact(props) {
 			</p>
 			<div className="contact__elements">
 				<div className="contact__links">
-					<a
-						className="contact__link"
-						href=" https://discord.com/users/379552759319625728"
-						target="_blank">
-						<div className="contact__link__content">
-							<box-icon
-								type="logo"
-								name="discord-alt"
-								color="white"
-							/>
-							<span>MiPiNi#2187</span>
-						</div>
-					</a>
-					<a
-						className="contact__link"
-						href="https://github.com/MiPiNi"
-						target="_blank">
-						<div className="contact__link__content">
-							<box-icon name="github" type="logo" color="white" />
-							<span>GitHub</span>
-						</div>
-					</a>
-					<a
-						className="contact__link"
-						href="mailto:d4niel.grala@gmail.com">
-						<div className="contact__link__content">
-							<box-icon name="mail-send" color="white" />
-							<span>E-Mail</span>
-						</div>
-					</a>
+					<div className="contact__link-wrapper">
+						<a
+							className="contact__link"
+							href=" https://discord.com/users/379552759319625728"
+							target="_blank">
+							<div className="contact__link__content">
+								<box-icon
+									type="logo"
+									name="discord-alt"
+									color="white"
+								/>
+								<span>MiPiNi#2187</span>
+							</div>
+						</a>
+					</div>
+
+					<div className="contact__link-wrapper">
+						<a
+							className="contact__link"
+							href="https://github.com/MiPiNi"
+							target="_blank">
+							<div className="contact__link__content">
+								<box-icon
+									name="github"
+									type="logo"
+									color="white"
+								/>
+								<span>GitHub</span>
+							</div>
+						</a>
+					</div>
+
+					<div className="contact__link-wrapper">
+						<a
+							className="contact__link"
+							href="mailto:d4niel.grala@gmail.com">
+							<div className="contact__link__content">
+								<box-icon name="mail-send" color="white" />
+								<span>E-Mail</span>
+							</div>
+						</a>
+					</div>
 				</div>
 				<br />
 				<button className="contact__link" onClick={handleClick}>

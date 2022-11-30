@@ -8,12 +8,21 @@ import Header from "./assets/components/Header";
 import About from "./assets/components/About";
 import Projects from "./assets/components/Projects";
 import Contact from "./assets/components/Contact";
+import Alert from "./assets/components/Alert";
 
 function App() {
 	const [language, setlanguage] = useState("pl");
+	const [alertText, setalertText] = useState("");
 
 	const langHandler = (e) => {
 		setlanguage(e);
+	};
+	const alertHandler = (e) => {
+		setalertText(e);
+		document.querySelector(".alert").style.opacity = "1";
+		setTimeout(() => {
+			document.querySelector(".alert").style.opacity = "0";
+		}, 1500);
 	};
 	useEffect(() => {
 		sal({ once: false });
@@ -21,12 +30,12 @@ function App() {
 	return (
 		<div className="main">
 			<Navbar langHandler={langHandler} language={language} />
-
+			<Alert alertText={alertText} />
 			<main className="main__content">
 				<Header />
 				<About language={language} />
 				<Projects language={language} />
-				<Contact language={language} />
+				<Contact language={language} alertHandler={alertHandler} />
 			</main>
 		</div>
 	);

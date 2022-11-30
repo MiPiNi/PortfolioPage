@@ -2,7 +2,7 @@ function SingleProject(props) {
 	const tech = props.tech.split(", ");
 	return (
 		<div
-			className="projects__projectsList__project "
+			className="projects__projectsList__project"
 			data-sal="slide-right"
 			data-sal-duration="1000">
 			<h3 className="project__title">{props.title}</h3>
