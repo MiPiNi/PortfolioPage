@@ -1,0 +1,16 @@
+@use "../sass/utils";
+
+.project {
+	&__link {
+		text-decoration: none;
+		color: utils.$text-color;
+		padding: 10px;
+		border: 1px solid utils.$accent-color;
+		background-color: utils.$secondary-color;
+		border-radius: 15px;
+	}
+	&__link:hover {
+		background-color: utils.$accent-color;
+		transition: background-color 0.2s linear;
+	}
+}

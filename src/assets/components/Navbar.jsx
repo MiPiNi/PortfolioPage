@@ -1,4 +1,5 @@
 import ReactCountryFlag from "react-country-flag";
+import "./Navbar.scss";
 
 function Navbar(props) {
 	let language = props.language;

@@ -25,7 +25,7 @@ function App() {
 		}, 1500);
 	};
 	useEffect(() => {
-		sal({ once: false });
+		sal({ once: true });
 	}, []);
 	return (
 		<div className="main">

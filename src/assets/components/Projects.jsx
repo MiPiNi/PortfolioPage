@@ -1,5 +1,7 @@
 import SingleProject from "./SingleProject";
 import { useState, useEffect } from "react";
+import "./Projects.scss";
+
 function Projects(props) {
 	let language = props.language;
 	const [isMobile, setisMobile] = useState(false);
@@ -9,34 +11,12 @@ function Projects(props) {
 		}
 	}, []);
 	if (isMobile) {
-		var SlideShow = {
-			plusSlides: (n) => {
-				SlideShow.showSlides((slideIndex += n));
-				console.log(slideIndex);
-			},
-			currentSlide: (n) => {
-				SlideShow.showSlides((slideIndex = n));
-			},
-			showSlides: (n) => {
-				let i;
-				let slides = document.getElementsByClassName(
-					"projects__projectsList__project"
-				);
-				if (n > slides.length) {
-					slideIndex = 1;
-				}
-				if (n < 1) {
-					slideIndex = slides.length;
-				}
-				for (i = 0; i < slides.length; i++) {
-					slides[i].style.display = "none";
-				}
-				slides[slideIndex - 1].style.display = "grid";
-			},
-		};
-
-		let slideIndex = 1;
-		SlideShow.showSlides(slideIndex);
+		document
+			.querySelectorAll(".projects__projectsList__project")
+			.forEach((item) => {
+				item.removeAttribute("data-sal");
+				item.removeAttribute("data-sal-duration");
+			});
 	}
 
 	return (
@@ -45,24 +25,6 @@ function Projects(props) {
 				{language == "pl" ? "Moje Projekty" : "My projects"}
 			</h2>
 			<div className={"projects__projectsList"}>
-				{isMobile ? (
-					<>
-						<a
-							className="projects__projectsList__prev"
-							onClick={() => {
-								SlideShow.plusSlides(-1);
-							}}>
-							&#10094;
-						</a>
-						<a
-							className="projects__projectsList__next"
-							onClick={() => {
-								SlideShow.plusSlides(1);
-							}}>
-							&#10095;
-						</a>
-					</>
-				) : null}
 				<SingleProject
 					title={"Portfolio"}
 					description={

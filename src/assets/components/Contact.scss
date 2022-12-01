@@ -1,0 +1,59 @@
+@use "../sass/utils";
+
+.contact {
+	&__title {
+		font-size: 30px;
+		font-weight: 700;
+	}
+	&__subtitle {
+		font-size: 20px;
+		font-weight: 400;
+	}
+	&__elements {
+		@include utils.flexViewCentered(column);
+	}
+	&__links {
+		@include utils.flexViewCentered(row);
+		flex-wrap: wrap;
+	}
+	&__link {
+		@include utils.flexViewCentered();
+		text-decoration: none;
+		color: utils.$text-color;
+		padding: 10px;
+		border: 1px solid utils.$accent-color;
+		background-color: utils.$secondary-color;
+		border-radius: 15px;
+		margin: 10px;
+		&__content {
+			@include utils.flexViewCentered(row);
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+		&:hover {
+			background-color: utils.$accent-color;
+			transition: background-color 0.3s linear;
+		}
+		&-wrapper:hover {
+			.contact__link {
+				background-color: utils.$accent-color;
+				transform: scale(-1, 1);
+				transition: background-color 0.3s linear, transform 0.3s linear;
+			}
+			.contact__link__content {
+				transform: scale(-1, 1);
+				transition: transform 0.3s linear;
+			}
+		}
+	}
+	&__handleText {
+		font-size: 20px;
+		font-weight: 400;
+		text-align: center;
+	}
+	&__span {
+		padding: 5px 5px;
+		font-family: "Roboto", sans-serif;
+		background-color: utils.$secondary-color;
+	}
+}

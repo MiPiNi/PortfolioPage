@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Skill from "./Skill";
+import "./About.scss";
 
 function About(props) {
 	let language = props.language;

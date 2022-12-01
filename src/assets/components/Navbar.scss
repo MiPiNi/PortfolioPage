@@ -1,0 +1,47 @@
+@use "../sass/utils";
+.main__navbar {
+	position: fixed;
+	width: 100vw;
+	height: 5vh;
+	top: 0;
+	background: utils.$secondary-color;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
+	border-bottom: 1px solid utils.$accent-color;
+}
+.navbar {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+	&__item {
+		@include utils.flexViewCentered(row);
+		font-size: 2vh;
+		list-style: none;
+		margin: 0 1vw;
+		padding: 0.5vw;
+		box-sizing: border-box;
+		height: 100%;
+		text-decoration: none;
+		color: utils.$text-color;
+	}
+	&__item:hover {
+		background: utils.$accent-color;
+		transition: background 0.2s linear;
+	}
+	&__languages {
+		display: flex;
+		align-items: center;
+	}
+	&__language {
+		cursor: pointer;
+		background: none;
+		margin-right: 2vw;
+		border: none;
+	}
+}

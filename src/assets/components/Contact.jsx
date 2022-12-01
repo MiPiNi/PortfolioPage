@@ -1,3 +1,5 @@
+import "./Contact.scss";
+
 function Contact(props) {
 	let language = props.language;
 	const handleClick = () => {

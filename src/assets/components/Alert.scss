@@ -1,0 +1,17 @@
+@use "../sass/utils";
+
+.alert {
+	@include utils.flexViewCentered(row);
+	opacity: 0;
+	transition: opacity 0.2s linear;
+	position: fixed;
+	top: 2vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 30vw;
+	height: 5vh;
+	background: utils.$accent-color;
+	color: utils.$text-color;
+	z-index: 2;
+	border-radius: 15px;
+}

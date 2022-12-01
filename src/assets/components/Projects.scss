@@ -1,0 +1,42 @@
+@use "../sass/utils";
+
+.projects {
+	&__title {
+		padding-top: 5vh;
+	}
+	&__projectsList {
+		@include utils.flexViewCentered(row);
+		flex-wrap: wrap;
+		margin-bottom: 10vh;
+		overflow-y: auto;
+		@media screen and (max-width: 768px) {
+			flex-direction: row;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+			overflow-x: auto;
+			height: 500px;
+			width: 100vw;
+		}
+		&__project {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(5, 1fr);
+			align-items: center;
+			justify-items: center;
+			text-align: center;
+			width: 450px;
+			height: 350px;
+			margin: 15px;
+			background-color: utils.$secondary-color;
+			border-radius: 10%;
+			font-size: 20px;
+			font-weight: 400;
+			box-shadow: 5px 5px 10px black;
+			@media screen and (max-width: 768px) {
+				width: 80vw;
+				flex-shrink: 0;
+				overflow: hidden;
+			}
+		}
+	}
+}

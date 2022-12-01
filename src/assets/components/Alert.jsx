@@ -1,3 +1,4 @@
+import "./Alert.scss";
 function Alert(props) {
 	let alertText = props.alertText;
 	return (

@@ -1,3 +1,5 @@
+import "./SingleProject.scss";
+
 function SingleProject(props) {
 	const tech = props.tech.split(", ");
 	return (

@@ -1,0 +1,10 @@
+@mixin flexViewCentered($direction: row) {
+	display: flex;
+	flex-direction: $direction;
+	align-items: center;
+	justify-content: center;
+}
+$main-color: rgb(11, 19, 43);
+$secondary-color: rgb(28, 37, 65);
+$accent-color: rgb(58, 80, 107);
+$text-color: rgb(255, 255, 255);
