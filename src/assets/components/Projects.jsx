@@ -1,23 +1,8 @@
 import SingleProject from "./SingleProject";
-import { useState, useEffect } from "react";
 import "./Projects.scss";
 
 function Projects(props) {
 	let language = props.language;
-	const [isMobile, setisMobile] = useState(false);
-	useEffect(() => {
-		if (window.innerWidth < 768) {
-			setisMobile(true);
-		}
-	}, []);
-	if (isMobile) {
-		document
-			.querySelectorAll(".projects__projectsList__project")
-			.forEach((item) => {
-				item.removeAttribute("data-sal");
-				item.removeAttribute("data-sal-duration");
-			});
-	}
 
 	return (
 		<section className="main__content__projects fullPage" id="projects">

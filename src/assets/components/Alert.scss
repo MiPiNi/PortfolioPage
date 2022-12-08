@@ -2,6 +2,8 @@
 
 .alert {
 	@include utils.flexViewCentered(row);
+	font-size: 2vmin;
+	text-align: center;
 	opacity: 0;
 	transition: opacity 0.2s linear;
 	position: fixed;
@@ -14,4 +16,5 @@
 	color: utils.$text-color;
 	z-index: 2;
 	border-radius: 15px;
+	border: 1px solid utils.$secondary-color;
 }

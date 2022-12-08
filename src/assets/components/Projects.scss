@@ -16,8 +16,20 @@
 			overflow-x: auto;
 			height: 500px;
 			width: 100vw;
+			&::-webkit-scrollbar {
+				width: 0.5vw;
+				background-color: utils.$secondary-color;
+				border-radius: 5px;
+			}
+			&::-webkit-scrollbar-thumb {
+				width: 0.5vw;
+				background-color: utils.$accent-color;
+				border: 1px solid utils.$secondary-color;
+				border-radius: 5px;
+			}
 		}
 		&__project {
+			padding: 0 1vw;
 			display: grid;
 			grid-template-columns: 1fr;
 			grid-template-rows: repeat(5, 1fr);
@@ -33,6 +45,7 @@
 			font-weight: 400;
 			box-shadow: 5px 5px 10px black;
 			@media screen and (max-width: 768px) {
+				padding: 0 1vw;
 				width: 80vw;
 				flex-shrink: 0;
 				overflow: hidden;

@@ -1,3 +1,4 @@
+@use "../sass/utils";
 .about {
 	&__top {
 		display: flex;
@@ -29,6 +30,17 @@
 		text-align: left;
 		font-size: 2.95vmin;
 		max-height: 75vh;
+		&::-webkit-scrollbar {
+			width: 0.5vw;
+			background-color: utils.$secondary-color;
+			border-radius: 5px;
+		}
+		&::-webkit-scrollbar-thumb {
+			width: 0.5vw;
+			background-color: utils.$accent-color;
+			border: 1px solid utils.$secondary-color;
+			border-radius: 5px;
+		}
 	}
 
 	&__skills {
