@@ -37,6 +37,19 @@ function Projects(props) {
 					}
 				/>
 				<SingleProject
+					title={"TODO_List"}
+					description={
+						language == "pl"
+							? "Aplikacja typu 'Full Stack' do zarządzania zadaniami. Stworzona w Angularze i Node.js"
+							: "Full Stack application for managing tasks. Created in Angular and Node.js"
+					}
+					tech={"angular, typescript, nodejs, mongodb"}
+					link={"https://github.com/MiPiNi/TODO_List"}
+					linkText={
+						language == "pl" ? "Zobacz projekt" : "View Project"
+					}
+				/>
+				<SingleProject
 					title={"Blackjack"}
 					description={
 						language == "pl"

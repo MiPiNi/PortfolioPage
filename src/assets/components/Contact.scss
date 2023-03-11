@@ -25,6 +25,7 @@
 		background-color: utils.$secondary-color;
 		border-radius: 15px;
 		margin: 10px;
+		cursor: pointer;
 		&__content {
 			@include utils.flexViewCentered(row);
 			flex-wrap: wrap;
