@@ -49,8 +49,8 @@ In my free time I like to play computer games, watch movies and series, and spen
 					<Skill name="Angular" level="4" />
 					<Skill name="JavaScript" level="4" />
 					<Skill name="HTML" level="4" />
-					<Skill name="CSS" level="4" />
 					<Skill name="SASS" level="4" />
+					<Skill name="CSS" level="4" />
 					<Skill name="Python" level="3" />
 					<Skill name="Unity" level="3" />
 					<Skill name="Git" level="3" />
