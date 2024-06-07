@@ -46,16 +46,16 @@ In my free time I like to play computer games, watch movies and series, and spen
 					</p>
 				</div>
 				<div className="about__skills">
-					<Skill name="Python" level="4" />
+					<Skill name="Angular" level="4" />
+					<Skill name="JavaScript" level="4" />
 					<Skill name="HTML" level="4" />
 					<Skill name="CSS" level="4" />
 					<Skill name="SASS" level="4" />
-					<Skill name="JavaScript" level="3" />
+					<Skill name="Python" level="3" />
 					<Skill name="Unity" level="3" />
 					<Skill name="Git" level="3" />
 					<Skill name="SQL" level="3" />
 					<Skill name="React.js" level="1" />
-					<Skill name="PHP" level="1" />
 				</div>
 			</div>
 		</section>
